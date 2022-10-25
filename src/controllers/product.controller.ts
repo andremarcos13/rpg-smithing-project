@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import ProductService from '../services/product.service';
 
-export default class ProcutController {
+export default class ProductController {
   productService: ProductService;
 
   constructor() {
