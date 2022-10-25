@@ -11,3 +11,7 @@ export interface IUser {
   level: number,
   password: string,
 }
+
+export interface IToken {
+  token: string,
+}
