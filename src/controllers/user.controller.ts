@@ -13,4 +13,10 @@ export default class UserController {
     const token = await this.userService.createUser(username, classe, level, password);
     return res.status(201).json({ token });
   };
+
+  login = async (req: Request, res: Response) => {
+    const { username, password } = req.body;
+    const loginUserToken = await this.userService.login(username, password);    
+    return res.status(200).json({ token: loginUserToken });
+  };
 }
