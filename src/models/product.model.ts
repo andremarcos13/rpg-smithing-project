@@ -23,4 +23,12 @@ export default class ProductModel {
       .execute('SELECT * FROM Trybesmith.Products');
     return products as IProduct[];
   }
+
+  public async update(productId: number, orderId: number) {
+    await this.connection
+      .execute(
+        'UPDATE Trybesmith.Products SET orderId = ? WHERE id = ?',
+        [orderId, productId],
+      );
+  }
 }

@@ -18,4 +18,8 @@ export default class ProductService {
     const products = await this.productModel.getAll();
     return products;
   }
+
+  public async updateProduct(productId: number, orderId: number) {
+    await this.productModel.update(productId, orderId);
+  }
 }

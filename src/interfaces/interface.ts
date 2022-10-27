@@ -21,3 +21,16 @@ export interface IOrder {
   userId: number,
   productsIds: number[],
 }
+
+export interface INewOrder {
+  userId: number,
+  productsIds: number[],
+}
+
+export interface IPayload {
+  payload: {
+    id: number;
+    username: string;
+  }
+  [key: string]: any;
+}
